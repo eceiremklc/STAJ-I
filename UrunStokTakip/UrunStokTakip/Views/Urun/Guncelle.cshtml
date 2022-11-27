@@ -1,0 +1,49 @@
+﻿@model UrunStokTakip.Models.Urunler
+@{
+    ViewBag.Title = "Guncelle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label>Ad</label>
+                    <input type="text" name="urun_adi" class="form-control" value="@Model.urun_adi" />
+                </div>
+                <div class="form-group">
+                    <label>Detay</label>
+                    <input type="text" name="urun_detay" class="form-control" value="@Model.urun_detay" />
+                </div>
+                <div class="form-group">
+                    <label>Önceki Resim</label>
+                    <img src="~/Content/Image/@Model.resim" width="90" height="90" />
+                </div>
+                <div class="form-group">
+                    @Html.Label("Resim", new { @class = "control-label col-md-2" })
+                    <input type="file" name="File" />
+                </div>
+                <div class="form-group">
+                    <label>Fiyat</label>
+                    <input type="text" name="urun_fiyat" class="form-control" value="@Model.urun_fiyat" />
+                </div>
+                <div class="form-group">
+                    <label>Stok</label>
+                    <input type="text" name="stok" class="form-control" value="@Model.stok" />
+                </div>
+                <div class="form-group">
+                    @Html.Label("Popülerlik", new { @class = "control-label col-md-2" })
+                    @Html.EditorFor(x => x.populerlik)
+                </div>
+                <div class="form-group">
+                    <label>Kategori</label>
+                    @Html.DropDownListFor(x => x.kategori_id, (List<SelectListItem>)ViewBag.ktgr, new { @class = "form-control" })
+                </div>
+                <button type="submit" class="btn btn-primary">Güncelle</button>
+                <a href="/Urun/Index">Ürün Listesi</a>
+            </form>
+        </div>
+    </div>
+</div>

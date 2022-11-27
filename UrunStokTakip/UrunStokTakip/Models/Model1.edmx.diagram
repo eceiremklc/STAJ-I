@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a72c0b8ebe214474a872d06ac302e6d2" Name="Diagram1">
+        <EntityTypeShape EntityType="UrunStokTakipModel.Kullanicilar" Width="1.5" PointX="0.75" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="UrunStokTakipModel.Satislar" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="UrunStokTakipModel.Sepet" Width="1.5" PointX="3" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="UrunStokTakipModel.sysdiagrams" Width="1.5" PointX="4.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="UrunStokTakipModel.Urunler" Width="1.5" PointX="4.875" PointY="3.5" IsExpanded="true" />
+        <AssociationConnector Association="UrunStokTakipModel.FK_Satislar_Kullanicilar" ManuallyRouted="false" />
+        <AssociationConnector Association="UrunStokTakipModel.FK_Sepet_Kullanicilar" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="UrunStokTakipModel.Kategori" Width="1.5" PointX="6.875" PointY="3.5" />
+        <AssociationConnector Association="UrunStokTakipModel.FK_Urunler_Kategori" />
+        <AssociationConnector Association="UrunStokTakipModel.FK_Sepet_Urunler" />
+        <AssociationConnector Association="UrunStokTakipModel.FK_Satislar_Urunler" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
